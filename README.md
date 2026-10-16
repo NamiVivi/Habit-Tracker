@@ -1,4 +1,4 @@
-# Habit Tracker ("Streaks")
+# Quit Quest
 
 A simple SwiftUI iPhone app for quitting habits such as smoking or drinking. Each habit counts the days since you last did it, and you earn stickers at milestones along the way.
 
@@ -15,7 +15,8 @@ A simple SwiftUI iPhone app for quitting habits such as smoking or drinking. Eac
 ## Requirements
 
 - A Mac with **Xcode 16 or later**, because the project uses folder-synchronized groups.
-- iOS 17 or later.
+- iOS 17 or later, iPhone only.
+- To upload to the App Store: Xcode 26 or later.
 
 ## Run it
 
@@ -25,7 +26,7 @@ A simple SwiftUI iPhone app for quitting habits such as smoking or drinking. Eac
 To install it on your own iPhone:
 
 1. Select the **HabitTracker** target, open **Signing & Capabilities**, and pick your Apple ID team.
-2. Change the bundle identifier from `com.example.HabitTracker` to something unique.
+2. The bundle identifier is `com.namivivi.QuitQuest`. If you're building under a different Apple account, change it to something unique.
 3. Plug in your phone and run.
 
 A free Apple ID works, but the app must be re-installed every 7 days. See Apple's guide: [Running your app in Simulator or on a device](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device).
@@ -41,6 +42,15 @@ HabitTracker/
   Models/HabitPreset.swift      Quick-start presets and emoji choices
   Services/NotificationScheduler.swift
   Views/                        List, detail, add/edit form, sticker book, celebration
+HabitTracker-Info.plist         Extra Info.plist keys merged with Xcode's generated ones
+docs/                           Website, privacy policy and support pages (GitHub Pages)
 ```
 
 A "day" means a full 24 hours since the time you set as your last slip, and "1 month" means 30 days.
+
+## App Store
+
+- **Name:** Quit Quest. **Bundle ID:** `com.namivivi.QuitQuest`.
+- **Encryption:** `ITSAppUsesNonExemptEncryption` is `NO`, so uploads skip the export compliance question.
+- **Privacy:** the app collects no data. In App Store Connect, choose "Data Not Collected".
+- **Web pages:** `docs/` holds the privacy policy (`privacy.html`) and support page (`support.html`). To publish them, turn on GitHub Pages for the `main` branch's `/docs` folder.
