@@ -44,6 +44,7 @@ HabitTracker/
   Views/                        List, detail, add/edit form, sticker book, celebration
 HabitTracker-Info.plist         Extra Info.plist keys merged with Xcode's generated ones
 docs/                           Website, privacy policy and support pages (GitHub Pages)
+AppStore/listing.md             App Store Connect listing text, ready to copy
 ```
 
 A "day" means a full 24 hours since the time you set as your last slip, and "1 month" means 30 days.
@@ -53,4 +54,5 @@ A "day" means a full 24 hours since the time you set as your last slip, and "1 m
 - **Name:** Quit Quest. **Bundle ID:** `com.namivivi.QuitQuest`.
 - **Encryption:** `ITSAppUsesNonExemptEncryption` is `NO`, so uploads skip the export compliance question.
 - **Privacy:** the app collects no data. In App Store Connect, choose "Data Not Collected".
+- **Listing text:** [`AppStore/listing.md`](AppStore/listing.md) has the subtitle, description, keywords, review notes and age-rating answers.
 - **Web pages:** `docs/` holds the privacy policy (`privacy.html`) and support page (`support.html`). To publish them, turn on GitHub Pages for the `main` branch's `/docs` folder.
